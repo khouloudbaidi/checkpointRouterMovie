@@ -3,8 +3,6 @@ import MoviList from "./MoviList/MoviList";
 import FilterByName from "./filterbyName/filterbyName";
 import FilterByRating from "./Rating/Rating";
 import data from "./data";
-import { Switch, Route } from "react-router-dom";
-import Movies from "./Movies";
 
 const MovieApp = () => {
   const [movies, setMovies] = useState(data);
@@ -31,9 +29,6 @@ const MovieApp = () => {
         rating={rating}
         AddMovie={AddMovie}
       />
-      <Switch>
-        <Route path="/movies/:id" component={Movies} />
-      </Switch>
     </div>
   );
 };
